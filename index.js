@@ -15,9 +15,6 @@ async function startApp() {
     mongoose.set('strictQuery', false)
     await mongoose.connect(DB_URL).then(() => {
       console.log('bd - ok')
-      app.get('/', (req, res) => {
-        res.send('Hey this is my API running 🥳')
-      })
     })
     app.listen(PORT, () => console.log('Server started on PORT: ' + PORT))
   } catch {}
