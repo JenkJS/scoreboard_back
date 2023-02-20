@@ -6,7 +6,7 @@ const app = express()
 
 app.use(express.json())
 app.use(express.static('public'));
-app.use('/api', router)
+app.use('/', router)
 const DB_URL =
   'mongodb+srv://admin:admin@scoreboard.1vgh3xq.mongodb.net/scoreboard?retryWrites=true&w=majority'
 
