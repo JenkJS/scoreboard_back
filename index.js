@@ -21,5 +21,5 @@ async function startApp() {
     console.log('Err', + e)
   }
 }
-startApp()
-export default app
+
+export default startApp()
