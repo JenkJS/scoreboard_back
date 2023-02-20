@@ -12,7 +12,7 @@ const DB_URL =
 
 async function startApp() {
   try {
-    mongoose.set('strictQuery', false)
+    await mongoose.set('strictQuery', false)
     await mongoose.connect(DB_URL).then(() => {
       console.log('bd - ok')
     })
