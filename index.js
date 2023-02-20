@@ -20,3 +20,4 @@ async function startApp() {
   } catch {}
 }
 startApp()
+module.exports = app;
