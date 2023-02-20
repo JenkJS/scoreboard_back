@@ -1,7 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import router from './router.js'
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 80
 const app = express()
 
 app.use(express.json())
