@@ -17,7 +17,8 @@ async function startApp() {
       console.log('bd - ok')
     })
     app.listen(PORT, () => console.log('Server started on PORT: ' + PORT))
-  } catch {}
+  } catch(e) {
+    console.log('Err', + e)
+  }
 }
-startApp()
-module.exports = app;
+export default startApp()
