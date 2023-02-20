@@ -7,7 +7,7 @@
   ],
   "routes": [
     {
-      "src": "./router.js",
+      "src": "router.js",
       "dest": "index.js"
     }
   ],
