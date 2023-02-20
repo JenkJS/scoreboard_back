@@ -5,7 +5,7 @@ const PORT = process.env.PORT || '5000'
 const app = express()
 
 app.use(express.json())
-app.use(express.static('static'))
+app.use(express.static('public'));
 app.use('/api', router)
 const DB_URL =
   'mongodb+srv://admin:admin@scoreboard.1vgh3xq.mongodb.net/scoreboard?retryWrites=true&w=majority'
