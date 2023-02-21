@@ -1,4 +1,4 @@
-import Player from './Player.js'
+const Player  = require ('./Player.js')
 
 
 export const getPlayers = async  (req,res)=>{

@@ -1,8 +1,7 @@
-import express from "express"
-import mongoose from  'mongoose'
-import cors from 'cors';
-import * as Controller from './api/Controller.js'
-
+const express = require("express")
+const mongoose = require('mongoose')
+const cors = require('cors')
+const Player = require('./api/Player')
 const PORT = process.env.PORT || 80
 
 const DB_URL =
@@ -17,10 +16,19 @@ mongoose.connect(DB_URL)
 const app = express()
 app.use(express.json());
 app.use(cors());
-app.use('/score', Controller.getPlayers)
+app.use('/score', async  (req,res)=> {
+  try {
+    const posts = await Player.find();
+    res.json(posts);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({
+      message: 'Не удалось получить тэги',
+    })
+  }
+})
 app.use(express.json())
 app.use(express.static('public'));
 
 
 app.listen(PORT, () => console.log('Server started on PORT: ' + PORT))
-export default app

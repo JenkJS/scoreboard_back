@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require( "mongoose");
 
 const Player = new mongoose.Schema({
         nickname: {type: String, require: true},
@@ -14,4 +14,4 @@ const Player = new mongoose.Schema({
         picture: {type: String, require: true}
 })
 
-export default mongoose.model('Player', Player)
+module.exports =  mongoose.model('Player', Player)
