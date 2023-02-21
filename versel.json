@@ -8,8 +8,8 @@
   "routes": [
     {
       "src": "router.js",
-      "dest": "index.js"
+      "dest": ""
     }
   ],
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "rewrites": [{ "source": "/players(.*)", "destination": "/players" }]
 }

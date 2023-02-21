@@ -1,4 +1,4 @@
-import PlayerService from './PlayerService.js'
+const PlayerService = require("./PlayerService.js");
 
 class Controller {
   async getHome(req, res) {
@@ -18,4 +18,4 @@ class Controller {
   }
 }
 
-export default new Controller()
+module.exports = new Controller()

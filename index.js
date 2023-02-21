@@ -1,12 +1,12 @@
-import express from 'express'
-import mongoose from 'mongoose'
-import router from './router.js'
+const express = require("express");
+const mongoose = require("mongoose");
+const router = require("./router.js");
 const PORT = process.env.PORT || 80
 const app = express()
 
 app.use(express.json())
 app.use(express.static('public'));
-app.use('/', router)
+app.use('/api', router)
 const DB_URL =
   'mongodb+srv://admin:admin@scoreboard.1vgh3xq.mongodb.net/scoreboard?retryWrites=true&w=majority'
 
@@ -21,5 +21,5 @@ async function startApp() {
     console.log('Err', + e)
   }
 }
-
-export default startApp()
+startApp()
+module.exports = app

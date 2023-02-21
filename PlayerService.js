@@ -1,4 +1,4 @@
-import Player from "./Player.js";
+const Player  = require("./Player.js");
 
 
 class PlayerService {
@@ -7,4 +7,4 @@ class PlayerService {
     }
 }
 
-export  default  new PlayerService();
+module.exports = new PlayerService();
