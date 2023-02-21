@@ -2,12 +2,11 @@ const express = require("express")
 const mongoose = require('mongoose')
 const cors = require('cors')
 const Player = require('./api/Player')
-const PORT = process.env.PORT || 80
-
-const DB_URL =
-  'mongodb+srv://admin:admin@scoreboard.1vgh3xq.mongodb.net/scoreboard?retryWrites=true&w=majority'
+const PORT = process.env.PORT || 5001
+// mongodb+srv://admin:admin@scoreboard.1vgh3xq.mongodb.net/scoreboard?retryWrites=true&w=majority
+// const DB_URL = 'mongodb+srv://admin:admin@scoreboard.1vgh3xq.mongodb.net/scoreboard?retryWrites=true&w=majority'
 mongoose.set('strictQuery', false)
-mongoose.connect(DB_URL)
+mongoose.connect(process.env.DB_URL)
   .then(() => {
     console.log('bd - ok')
   })
